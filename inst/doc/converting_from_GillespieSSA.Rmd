@@ -57,7 +57,7 @@ if("package:GillespieSSA" %in% search()) detach("package:GillespieSSA", unload=T
 
 In order to port these objects, it is preferable to use the updated notation from the respective GillespieSSA2 vignette:
 
-* [Vignette on Github](https://github.com/rcannood/GillespieSSA2/blob/master/vignettes/lotka_predator_prey.md)
+* [CRAN Vignette](https://CRAN.R-project.org/package=GillespieSSA2/vignettes/lotka_predator_prey.html)
 * `vignette("lotka_predator_prey", package = "GillespieSSA2")`
 
 ```{r gssa2}
