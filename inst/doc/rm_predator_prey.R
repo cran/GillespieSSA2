@@ -1,9 +1,9 @@
-## ---- setseed, echo=FALSE------------------------------------------------
+## ---- setseed, echo=FALSE-----------------------------------------------------
 set.seed(1)
 knitr::opts_chunk$set(fig.width = 6, fig.height = 4)
 if("package:GillespieSSA" %in% search()) detach("package:GillespieSSA", unload=TRUE) 
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 library(GillespieSSA2)
 sim_name <- "Rosenzweig-MacArthur Predator-Prey model"
 params <- c(
@@ -18,7 +18,7 @@ params <- c(
 final_time <- 10
 initial_state  <- c(N = 500, P = 500)
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 reactions <- list(
   reaction("b * N", c(N = +1)),
   reaction("(d + (b - d) * N / K) * N", c(N = -1)),
@@ -27,7 +27,7 @@ reactions <- list(
   reaction("g * P", c(P = -1))
 )
 
-## ----exact---------------------------------------------------------------
+## ----exact--------------------------------------------------------------------
 set.seed(1)
 out <- ssa(
   initial_state = initial_state,
@@ -39,7 +39,7 @@ out <- ssa(
 ) 
 autoplot.ssa(out)
 
-## ----etl-----------------------------------------------------------------
+## ----etl----------------------------------------------------------------------
 set.seed(1)
 out <- ssa(
   initial_state = initial_state,
@@ -51,7 +51,7 @@ out <- ssa(
 ) 
 autoplot.ssa(out)
 
-## ----btl-----------------------------------------------------------------
+## ----btl----------------------------------------------------------------------
 set.seed(1)
 out <- ssa(
   initial_state = initial_state,

@@ -28,12 +28,23 @@ Explicit tau-leaping (`ssa_etl()`), and the Binomial tau-leaping
 
 ## Install
 
-You can install the development version of GillespieSSA2 from GitHub
-with
+You can install:
 
-``` r
-devtools::install_github("rcannood/GillespieSSA2", build_vignettes = TRUE)
-```
+  - the latest released version from CRAN with
+    
+    ``` r
+    install.packages("GillespieSSA2")
+    ```
+
+  - the latest development version from github
+    with
+    
+    ``` r
+    devtools::install_github("rcannood/GillespieSSA2", build_vignettes = TRUE)
+    ```
+
+If you encounter a bug, please file a minimal reproducible example on
+the [issues](https://github.com/rcannood/GillespieSSA2/issues) page.
 
 ## Examples
 
@@ -68,7 +79,16 @@ full list of changes.
 
 <!-- This section gets automatically generated from NEWS.md -->
 
-### Recent changes in GillespieSSA2 0.2.5
+### Recent changes in GillespieSSA2 0.2.6
+
+  - BUG FIX: Zap small negative propensity and state values.
+
+  - FEATURE `autoplot.ssa()`: Allow plotting the firings.
+
+  - DEBUG FEATURE `ssa()`: Allow returning the GillespieSSA2 instead of
+    running it.
+
+### Recent changes in GillespieSSA2 0.2.5 (21-08-2019)
 
   - BUG FIX: Use `fabs()` instead of `abs()` to calculate the absolute
     value of a floating point value.
@@ -76,20 +96,3 @@ full list of changes.
   - BUG FIX: Precompiling returns a list of compiled function pointers,
     instead of a single function pointer that is secretly an array of
     function pointers.
-
-### Recent changes in GillespieSSA2 0.2.4 (05-08-2019)
-
-  - MAJOR CHANGE: Split up Rcpp code to make separate parts easier to
-    test.
-
-  - TESTING: Write unit tests for many of the functions.
-
-  - MINOR CHANGE: Renamed `ssa_direct()` to `ssa_exact()`.
-
-  - MINOR CHANGE: Store firings, buffer and propensity objects only if
-    requested.
-
-  - BUG FIX: `limiting` variable in `ssa_btl()` should be an integer,
-    not a double.
-
-  - MINOR CHANGE: Timer now has millisecond accuracy, instead of second.

@@ -1,22 +1,22 @@
-## ---- setseed, echo=FALSE------------------------------------------------
+## ---- setseed, echo=FALSE-----------------------------------------------------
 set.seed(1)
 knitr::opts_chunk$set(fig.width = 6, fig.height = 4)
 if("package:GillespieSSA" %in% search()) detach("package:GillespieSSA", unload=TRUE) 
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 library(GillespieSSA2)
 sim_name <- "Kermack-McKendrick SIR model"
 params <- c(beta = .001, gamma = .1)
 final_time <- 100
 initial_state <- c(S = 500, I = 1, R = 0)
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 reactions <- list(
   reaction("beta * S * I", c(S = -1, I = +1), name = "transmission"),
   reaction("gamma * I", c(I = -1, R = +1), name = "recovery")
 )
 
-## ----exact---------------------------------------------------------------
+## ----exact--------------------------------------------------------------------
 set.seed(1)
 out <- ssa(
   initial_state = initial_state,
@@ -28,7 +28,7 @@ out <- ssa(
 ) 
 autoplot.ssa(out)
 
-## ----etl-----------------------------------------------------------------
+## ----etl----------------------------------------------------------------------
 set.seed(1)
 out <- ssa(
   initial_state = initial_state,
@@ -40,7 +40,7 @@ out <- ssa(
 ) 
 autoplot.ssa(out)
 
-## ----btl-----------------------------------------------------------------
+## ----btl----------------------------------------------------------------------
 set.seed(2)
 out <- ssa(
   initial_state = initial_state,

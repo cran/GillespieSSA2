@@ -1,9 +1,9 @@
-## ---- setseed, echo=FALSE------------------------------------------------
+## ---- setseed, echo=FALSE-----------------------------------------------------
 set.seed(1)
 knitr::opts_chunk$set(fig.width = 6, fig.height = 4)
 if("package:GillespieSSA2" %in% search()) detach("package:GillespieSSA2", unload=TRUE) 
 
-## ----gssa1---------------------------------------------------------------
+## ----gssa1--------------------------------------------------------------------
 library(GillespieSSA)
 parms <- c(c1 = 10, c2 = .01, c3 = 10)
 tf <- 2                                        # Final time
@@ -25,11 +25,11 @@ out <- GillespieSSA::ssa(
 ) 
 ssa.plot(out, show.title = TRUE, show.legend = FALSE)
 
-## ---- setseed2, echo=FALSE-----------------------------------------------
+## ---- setseed2, echo=FALSE----------------------------------------------------
 set.seed(1)
 if("package:GillespieSSA" %in% search()) detach("package:GillespieSSA", unload=TRUE) 
 
-## ----gssa2---------------------------------------------------------------
+## ----gssa2--------------------------------------------------------------------
 library(GillespieSSA2)
 sim_name <- "Lotka Predator-Prey model"
 params <- c(c1 = 10, c2 = .01, c3 = 10)
@@ -52,7 +52,7 @@ out <- GillespieSSA2::ssa(
 ) 
 autoplot.ssa(out)
 
-## ----port----------------------------------------------------------------
+## ----port---------------------------------------------------------------------
 out <- 
   GillespieSSA2::ssa(
     initial_state = x0,

@@ -1,9 +1,9 @@
-## ---- setseed, echo=FALSE------------------------------------------------
+## ---- setseed, echo=FALSE-----------------------------------------------------
 set.seed(1)
 knitr::opts_chunk$set(fig.width = 6, fig.height = 4)
 if("package:GillespieSSA" %in% search()) detach("package:GillespieSSA", unload=TRUE) 
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 library(GillespieSSA2)
 sim_name <- "SIRS metapopulation model"
 patchPopSize <- 500                    # Patch size
@@ -18,11 +18,11 @@ params <- c(
   N = patchPopSize                     # Patch population size (constant)
 ) 
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 initial_state <- c(patchPopSize - 1, 1, rep(c(patchPopSize, 0), U - 1))
 names(initial_state) <- unlist(lapply(seq_len(U), function(i) paste0(c("S", "I"), i)))
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 reactions <- unlist(lapply(
   seq_len(U),
   function(patch) {
@@ -57,7 +57,7 @@ reactions <- unlist(lapply(
   }
 ), recursive = FALSE)
 
-## ----exact---------------------------------------------------------------
+## ----exact--------------------------------------------------------------------
 set.seed(1)
 out <- ssa(
   initial_state = initial_state,
@@ -69,7 +69,7 @@ out <- ssa(
 ) 
 autoplot.ssa(out)
 
-## ----etl-----------------------------------------------------------------
+## ----etl----------------------------------------------------------------------
 set.seed(1)
 out <- ssa(
   initial_state = initial_state,
@@ -81,7 +81,7 @@ out <- ssa(
 ) 
 autoplot.ssa(out)
 
-## ----btl-----------------------------------------------------------------
+## ----btl----------------------------------------------------------------------
 set.seed(1)
 out <- ssa(
   initial_state = initial_state,
