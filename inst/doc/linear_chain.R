@@ -33,7 +33,7 @@ out <- ssa(
   method = ssa_exact(),
   sim_name = sim_name
 ) 
-autoplot.ssa(out)
+plot_ssa(out)
 
 ## ----etl----------------------------------------------------------------------
 set.seed(1)
@@ -45,7 +45,7 @@ out <- ssa(
   method = ssa_etl(tau = .1),
   sim_name = sim_name
 ) 
-autoplot.ssa(out)
+plot_ssa(out)
 
 ## ----btl----------------------------------------------------------------------
 set.seed(1)
@@ -57,5 +57,5 @@ out <- ssa(
   method = ssa_btl(mean_firings = 50),
   sim_name = sim_name
 ) 
-autoplot.ssa(out)
+plot_ssa(out)
 

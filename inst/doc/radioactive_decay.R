@@ -25,7 +25,7 @@ out <- ssa(
   method = ssa_exact(),
   sim_name = sim_name
 ) 
-autoplot.ssa(out)
+plot_ssa(out)
 
 ## ----etl----------------------------------------------------------------------
 set.seed(1)
@@ -37,7 +37,7 @@ out <- ssa(
   method = ssa_etl(tau = .003),
   sim_name = sim_name
 ) 
-autoplot.ssa(out)
+plot_ssa(out)
 
 ## ----btl----------------------------------------------------------------------
 set.seed(1)
@@ -49,5 +49,5 @@ out <- ssa(
   method = ssa_btl(),
   sim_name = sim_name
 ) 
-autoplot.ssa(out)
+plot_ssa(out)
 

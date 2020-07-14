@@ -33,5 +33,5 @@ out <-
 print(out$stats)
 
 ## ----fig.width=7, fig.height=5------------------------------------------------
-autoplot.ssa(out)
+plot_ssa(out)
 

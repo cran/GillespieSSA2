@@ -50,7 +50,7 @@ out <- GillespieSSA2::ssa(
   verbose = FALSE,
   sim_name = sim_name
 ) 
-autoplot.ssa(out)
+plot_ssa(out)
 
 ## ----port---------------------------------------------------------------------
 out <- 
@@ -65,5 +65,5 @@ out <-
     sim_name = simName
   )
 print(out$stats)
-autoplot.ssa(out)
+plot_ssa(out)
 
