@@ -1,7 +1,7 @@
 Type: Package
 Package: GillespieSSA2
 Title: Gillespie's Stochastic Simulation Algorithm for Impatient People
-Version: 0.2.8
+Version: 0.2.10
 Authors@R: 
     c(person(given = "Robrecht",
              family = "Cannoodt",
@@ -32,11 +32,11 @@ Suggests: covr, ggplot2, GillespieSSA, knitr, rmarkdown, testthat (>=
 LinkingTo: Rcpp
 VignetteBuilder: knitr
 Encoding: UTF-8
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.1
 NeedsCompilation: yes
-Packaged: 2021-05-18 03:25:33 UTC; rcannood
+Packaged: 2022-09-23 04:47:00 UTC; rcannood
 Author: Robrecht Cannoodt [aut, cre] (<https://orcid.org/0000-0003-3641-729X>),
   Wouter Saelens [aut] (<https://orcid.org/0000-0002-7114-6248>)
 Maintainer: Robrecht Cannoodt <rcannood@gmail.com>
 Repository: CRAN
-Date/Publication: 2021-05-18 09:50:10 UTC
+Date/Publication: 2022-09-23 05:10:02 UTC

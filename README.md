@@ -9,7 +9,7 @@ Downloads](https://cranlogs.r-pkg.org/badges/GillespieSSA2)](https://cran.r-proj
 ![R-CMD-check](https://github.com/rcannood/GillespieSSA2/workflows/R-CMD-check/badge.svg)
 [![DOI](https://img.shields.io/badge/doi-10.1101/2020.02.06.936971-green)](https://doi.org/10.1101/2020.02.06.936971)
 [![Coverage
-Status](https://codecov.io/gh/rcannood/GillespieSSA2/branch/master/graph/badge.svg)](https://codecov.io/gh/rcannood/GillespieSSA2?branch=master)
+Status](https://app.codecov.io/gh/rcannood/GillespieSSA2/branch/master/graph/badge.svg)](https://app.codecov.io/gh/rcannood/GillespieSSA2?branch=master)
 <!-- badges: end -->
 
 # `GillespieSSA2`: Gillespie’s Stochastic Simulation Algorithm for impatient people.
@@ -22,8 +22,8 @@ GillespieSSA package originally written by Mario Pineda-Krch.
 GillespieSSA2 has the following added benefits:
 
 -   The whole algorithm is run in Rcpp which results in major speed
-    improvements (&gt;100x). Even your propensity functions (reactions)
-    are being compiled to Rcpp!
+    improvements (>100x). Even your propensity functions (reactions) are
+    being compiled to Rcpp!
 -   Parameters and variables have been renamed to make them easier to
     understand.
 -   Many unit tests try to ensure that the code works as intended.
@@ -76,22 +76,3 @@ The following example models are available:
     `vignette("rm_predator_prey", package="GillespieSSA2")`
 -   Kermack-McKendrick SIR model (Brown & Rothery, 1993):  
     `vignette("sir", package="GillespieSSA2")`
-
-## Latest changes
-
-Check out `news(package = "GillespieSSA2")` or [NEWS.md](NEWS.md) for a
-full list of changes.
-
-<!-- This section gets automatically generated from NEWS.md -->
-
-### Recent changes in GillespieSSA2 0.2.8
-
--   BUG FIX: RNG now uses RNGScope to properly get and put the RNG state
-    before calling RNG functions (fixes \#8, thanks @bbolker!).
-
--   DOCUMENTATION: Added example for `compile_reactions()`.
-
-### Recent changes in GillespieSSA2 0.2.7 (14-07-2020)
-
--   BUG FIX: Renamed `autoplot.ssa()` to `plot_ssa()` for compatibility
-    with R 4.0.
